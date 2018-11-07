@@ -1,0 +1,10 @@
+.logo {
+  width: 70px;
+  background-image: url("decent.svg");
+  background-position: left center;
+  background-size: 65px;
+  background-repeat: no-repeat;
+}
+.logo__title--indent {
+  visibility: hidden;
+}
