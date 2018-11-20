@@ -1,22 +1,23 @@
-// variables
+// Variables
 @col--bg: #c3edf8;
-@col--text: #2e6897;
+@col--text: #3177b1;
 
+
+// General styles
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
 }
-
-section{
-    padding: 10px;
-}
-
 .link{
     color: @col--text;
     text-decoration: none;
 }
 .btn-primary{
     background-color: @col--text;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 25px;
 }
 .btn-secondary{
     background: none;
@@ -29,12 +30,26 @@ section{
 .container{
     max-width: 1000px;
     margin: auto;
+    padding: 0 10px;
+}
+
+.font-sizes--lg{
+    h2{
+        font-size: 30px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+.margin-below{
+    margin-bottom: 40px;
 }
 
 
-.header{
+//Section styles
+.navbar{
     background-color: @col--bg;
-    padding: 10px;
+    padding: 10px 0;
     #hamburger{
         cursor: pointer;
         float: right;
@@ -74,5 +89,24 @@ section{
         background-repeat: no-repeat;
         width:65px;
         height: 41px
+    }
+}
+
+@media screen and (max-width: 350px){
+    .logo .logo__title {
+        background-size: 50px;
+        width: 50px;
+    }
+}
+
+.header{
+    background-color: @col--bg;
+    color: @col--text;
+    padding: 50px 0px;
+}
+@media screen and (min-width: 768px){
+    .header{
+        padding: 80px 0;
+        .font-sizes--lg;
     }
 }
