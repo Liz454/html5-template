@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
@@ -5,6 +8,9 @@ body {
 .link {
   color: #3177b1;
   text-decoration: none;
+}
+.btn {
+  outline: 0;
 }
 .btn-primary {
   background-color: #3177b1;
@@ -26,18 +32,65 @@ body {
   margin: auto;
   padding: 0 10px;
 }
-.font-sizes--lg h2 {
-  font-size: 30px;
-}
-.font-sizes--lg p {
-  font-size: 18px;
-}
 .margin-below {
   margin-bottom: 40px;
+}
+.font-sizes-sm h2 {
+  font-size: 24px;
+}
+.font-sizes-sm h3 {
+  font-size: 18px;
+}
+.font-sizes-sm p {
+  font-size: 16px;
+}
+.font-sizes-lg h2 {
+  font-size: 30px;
+}
+.font-sizes-lg h3 {
+  font-size: 20px;
+}
+.font-sizes-lg p {
+  font-size: 18px;
+}
+section h2 {
+  font-size: 30px;
+}
+section h3 {
+  font-size: 20px;
+}
+section p {
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  section h2 {
+    font-size: 24px;
+  }
+  section h3 {
+    font-size: 18px;
+  }
+  section p {
+    font-size: 16px;
+  }
 }
 .navbar {
   background-color: #c3edf8;
   padding: 10px 0;
+}
+.navbar .logo {
+  margin: 0;
+  width: 65px;
+}
+.navbar .logo .logo__title {
+  float: left;
+  text-indent: -9999px;
+  display: block;
+  background-image: url("decent.svg");
+  background-position: left center;
+  background-size: 65px;
+  background-repeat: no-repeat;
+  width: 65px;
+  height: 41px;
 }
 .navbar #hamburger {
   cursor: pointer;
@@ -63,23 +116,8 @@ body {
 .navbar nav h3 {
   display: none;
 }
-.logo {
-  margin: 0;
-  width: 65px;
-}
-.logo .logo__title {
-  float: left;
-  text-indent: -9999px;
-  display: block;
-  background-image: url("decent.svg");
-  background-position: left center;
-  background-size: 65px;
-  background-repeat: no-repeat;
-  width: 65px;
-  height: 41px;
-}
 @media screen and (max-width: 350px) {
-  .logo .logo__title {
+  .navbar .logo .logo__title {
     background-size: 50px;
     width: 50px;
   }
@@ -104,15 +142,13 @@ body {
   margin: auto;
   margin-top: 100px;
   text-indent: -9999px;
+  transition: 0.1s;
+}
+.header .btn-arrow:hover {
+  background-size: 50px;
 }
 @media screen and (min-width: 768px) {
   .header {
     padding-top: 80px;
-  }
-  .header h2 {
-    font-size: 30px;
-  }
-  .header p {
-    font-size: 18px;
   }
 }

@@ -6,6 +6,9 @@
 
 
 // General styles
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
@@ -13,6 +16,9 @@ body {
 .link{
     color: @col--text;
     text-decoration: none;
+}
+.btn{
+    outline: 0;
 }
 .btn-primary{
     background-color: @col--text;
@@ -34,17 +40,41 @@ body {
     margin: auto;
     padding: 0 10px;
 }
+.margin-below{
+    margin-bottom: 40px;
+}
 
-.font-sizes--lg{
+
+.font-sizes-sm{
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+.font-sizes-lg{
     h2{
         font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
     }
     p{
         font-size: 18px;
     }
 }
-.margin-below{
-    margin-bottom: 40px;
+
+section{
+    .font-sizes-lg;
+}
+@media screen and (max-width: 767px){
+    section{
+        .font-sizes-sm;
+    }
 }
 
 
@@ -52,6 +82,21 @@ body {
 .navbar{
     background-color: @col--bg;
     padding: 10px 0;
+    .logo{ 
+        margin: 0;
+        width: 65px;
+        .logo__title {
+            float: left;
+            text-indent: -9999px;
+            display: block;
+            background-image: url("decent.svg");
+            background-position: left center;
+            background-size: 65px;
+            background-repeat: no-repeat;
+            width:65px;
+            height: 41px
+        }
+    }
     #hamburger{
         cursor: pointer;
         float: right;
@@ -78,28 +123,14 @@ body {
     }
 }
 
-.logo{ 
-    margin: 0;
-    width: 65px;
-    .logo__title {
-        float: left;
-        text-indent: -9999px;
-        display: block;
-        background-image: url("decent.svg");
-        background-position: left center;
-        background-size: 65px;
-        background-repeat: no-repeat;
-        width:65px;
-        height: 41px
-    }
-}
-
 @media screen and (max-width: 350px){
-    .logo .logo__title {
+    .navbar .logo .logo__title {
         background-size: 50px;
         width: 50px;
     }
 }
+
+
 
 .header{
     background-color: @col--bg;
@@ -120,11 +151,14 @@ body {
         margin: auto;
         margin-top: 100px;
         text-indent: -9999px;
+        transition: 0.1s;
+    }
+    .btn-arrow:hover{
+        background-size: 50px;
     }
 }
 @media screen and (min-width: 768px){
     .header{
         padding-top: 80px;
-        .font-sizes--lg;
     }
 }
