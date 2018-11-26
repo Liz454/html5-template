@@ -11,6 +11,7 @@ body {
 }
 .btn {
   outline: 0;
+  cursor: pointer;
 }
 .btn-primary {
   background-color: #3177b1;
@@ -84,7 +85,6 @@ section p {
 .navbar .logo .logo__title {
   float: left;
   text-indent: -9999px;
-  display: block;
   background-image: url("decent.svg");
   background-position: left center;
   background-size: 65px;
