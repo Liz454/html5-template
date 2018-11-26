@@ -6,13 +6,6 @@
 
 
 // General styles
-html{
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-}
 .link{
     color: @col--text;
     text-decoration: none;
@@ -39,13 +32,12 @@ body {
 .container{
     max-width: 1000px;
     margin: auto;
-    padding: 0 10px;
+    //padding: 0 10px;
+    width:90%;
 }
 .margin-below{
     margin-bottom: 40px;
 }
-
-
 .font-sizes-sm{
     h2{
         font-size: 24px;
@@ -53,7 +45,7 @@ body {
     h3{
         font-size: 18px;
     }
-    p{
+    p, .link{
         font-size: 16px;
     }
 }
@@ -64,16 +56,23 @@ body {
     h3{
         font-size: 20px;
     }
-    p{
+    p, .link{
         font-size: 18px;
     }
 }
 
-section{
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+section, header{
     .font-sizes-lg;
 }
 @media screen and (max-width: 767px){
-    section{
+    section, header{
         .font-sizes-sm;
     }
 }
@@ -94,7 +93,11 @@ section{
             background-size: 65px;
             background-repeat: no-repeat;
             width:65px;
-            height: 41px
+            height: 41px;
+            @media screen and (max-width: 767px){
+                background-size: 50px;
+                width: 50px;
+            }
         }
     }
     #hamburger{
@@ -110,10 +113,8 @@ section{
         }
     }
     nav{
-        font-size: 18px;
         float: right;
         padding: 10px;
-        height: 100%;
         .link{
             padding: 0 10px;
         }
@@ -123,42 +124,28 @@ section{
     }
 }
 
-@media screen and (max-width: 350px){
-    .navbar .logo .logo__title {
-        background-size: 50px;
-        width: 50px;
-    }
-}
-
-
-
 .header{
+    min-height: 85vh; //need to somehow minus navbar height
     background-color: @col--bg;
     color: @col--text;
     padding: 0;
     padding-top: 50px;
     padding-bottom: 10px;
+    @media screen and (min-width: 768px){
+        padding-top: 80px;
+    }
     .btn-arrow{
-        padding: 10px;
-        width: 40px;
-        background: transparent;
-        background-image: url("chevron-down.svg");
-        background-position: center;
-        background-size: 40px;
-        background-repeat: no-repeat;
+        width: inherit;
+        max-width: 1000px;
+        background: transparent url("chevron-down.svg") center/40px no-repeat;
         border: none;
         display: block;
-        margin: auto;
-        margin-top: 100px;
         text-indent: -9999px;
         transition: 0.1s;
+        position: absolute;
+        bottom: 30px;
     }
     .btn-arrow:hover{
         background-size: 50px;
-    }
-}
-@media screen and (min-width: 768px){
-    .header{
-        padding-top: 80px;
     }
 }
