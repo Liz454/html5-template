@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 .link {
   color: #3177b1;
   text-decoration: none;
@@ -122,6 +125,45 @@ header .link {
   margin: 5px 0;
   border-radius: 2px;
 }
+@keyframes bar1-animation {
+  95% {
+    transform: translate(0px, 9px);
+    background-color: #3177b1;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.navbar #hamburger .bar1-animate {
+  animation-name: bar1-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar2-animation {
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.navbar #hamburger .bar2-animate {
+  animation-name: bar2-animation;
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes bar3-animation {
+  95% {
+    transform: translate(0px, -9px);
+    background-color: #3177b1;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+.navbar #hamburger .bar3-animate {
+  animation-name: bar3-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 .navbar nav {
   float: right;
   padding: 10px;
@@ -133,7 +175,7 @@ header .link {
   display: none;
 }
 .header {
-  min-height: 85vh;
+  min-height: 80vh;
   background-color: #c3edf8;
   color: #3177b1;
   padding: 0;
@@ -145,17 +187,22 @@ header .link {
     padding-top: 80px;
   }
 }
-.header .btn-arrow {
+.header .btn-arrow__container {
   width: inherit;
   max-width: 1000px;
+  position: absolute;
+  bottom: 60px;
+}
+.header .btn-arrow__container .btn-arrow__btn {
   background: transparent url("chevron-down.svg") center / 40px no-repeat;
   border: none;
-  display: block;
+  width: 40px;
+  padding: 10px 20px;
   text-indent: -9999px;
+  display: block;
+  margin: auto;
   transition: 0.1s;
-  position: absolute;
-  bottom: 30px;
 }
-.header .btn-arrow:hover {
+.header .btn-arrow__container .btn-arrow__btn:hover {
   background-size: 50px;
 }

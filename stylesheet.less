@@ -6,6 +6,9 @@
 
 
 // General styles
+.hidden{
+    display: none;
+}
 .link{
     color: @col--text;
     text-decoration: none;
@@ -32,7 +35,6 @@
 .container{
     max-width: 1000px;
     margin: auto;
-    //padding: 0 10px;
     width:90%;
 }
 .margin-below{
@@ -111,6 +113,46 @@ section, header{
             margin: 5px 0;
             border-radius: 2px;
         }
+        @keyframes bar1-animation{
+            95% {
+                transform: translate(0px, 9px);
+                background-color: @col--text;
+            }
+            100%{background-color: transparent}
+        }
+        .bar1-animate{
+            animation-name: bar1-animation;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards; 
+        }
+        // .bar1-animate-reverse{
+        //     animation-name: bar1-animation;
+        //     animation-duration: 0.5s;
+        //     animation-fill-mode: backwards; 
+        // }
+
+        @keyframes bar2-animation{
+            100% {transform: rotate(45deg)}
+        }
+        .bar2-animate{
+            animation-name: bar2-animation;
+            animation-delay: 0.5s;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes bar3-animation{
+            95% {
+                transform: translate(0px, -9px);
+                background-color: @col--text;
+            }
+            100%{background-color: transparent}
+        }
+        .bar3-animate{
+            animation-name: bar3-animation;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards; 
+        }
     }
     nav{
         float: right;
@@ -124,8 +166,9 @@ section, header{
     }
 }
 
+
 .header{
-    min-height: 85vh; //need to somehow minus navbar height
+    min-height: 80vh; //need to somehow minus navbar height
     background-color: @col--bg;
     color: @col--text;
     padding: 0;
@@ -134,18 +177,23 @@ section, header{
     @media screen and (min-width: 768px){
         padding-top: 80px;
     }
-    .btn-arrow{
+    .btn-arrow__container{
         width: inherit;
         max-width: 1000px;
-        background: transparent url("chevron-down.svg") center/40px no-repeat;
-        border: none;
-        display: block;
-        text-indent: -9999px;
-        transition: 0.1s;
         position: absolute;
-        bottom: 30px;
-    }
-    .btn-arrow:hover{
-        background-size: 50px;
+        bottom: 60px;
+        .btn-arrow__btn{
+           background: transparent url("chevron-down.svg") center/40px no-repeat; 
+           border: none;
+           width: 40px;
+           padding: 10px 20px;
+           text-indent: -9999px;
+           display: block;
+           margin: auto;
+           transition: 0.1s;
+           &:hover{
+            background-size: 50px;
+            }
+        }
     }
 }
