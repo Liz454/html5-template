@@ -125,13 +125,17 @@ header .link {
   margin: 5px 0;
   border-radius: 2px;
 }
+.navbar #hamburger .hamburger-animations {
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
 @keyframes bar1-animation {
   50% {
     transform: translate(0px, 9px);
   }
   100% {
-    transform: rotate(45deg);
-    transform-origin: 6% 165%;
+    transform: translate(0px, 9px) rotate(45deg);
   }
 }
 @keyframes bar1-animation--reverse {
@@ -139,19 +143,20 @@ header .link {
     transform: translate(0px, 9px);
   }
   100% {
-    transform: rotate(45deg);
-    transform-origin: 6% 165%;
+    transform: translate(0px, 9px) rotate(45deg);
   }
 }
 .navbar #hamburger .bar1-animate {
-  animation-name: bar1-animation;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: bar1-animation;
 }
 .navbar #hamburger .bar1-animate--reverse {
-  animation-name: bar1-animation--reverse;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: bar1-animation--reverse;
   animation-direction: reverse;
 }
 @keyframes bar2-animation {
@@ -166,29 +171,34 @@ header .link {
   0% {
     background-color: transparent;
   }
+  90% {
+    background-color: transparent;
+  }
   100% {
     background-color: #3177b1;
   }
 }
 .navbar #hamburger .bar2-animate {
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
   animation-name: bar2-animation;
   animation-delay: 0.2s;
   animation-duration: 0.1s;
-  animation-fill-mode: forwards;
 }
 .navbar #hamburger .bar2-animate--reverse {
-  animation-name: bar2-animation--reverse;
-  animation-delay: 5s;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: bar2-animation--reverse;
+  animation-duration: .25s;
 }
 @keyframes bar3-animation {
   50% {
     transform: translate(0px, -9px);
   }
   100% {
-    transform: rotate(-45deg);
-    transform-origin: 7% -62%;
+    transform: translate(0px, -9px) rotate(-45deg);
   }
 }
 @keyframes bar3-animation--reverse {
@@ -196,19 +206,20 @@ header .link {
     transform: translate(0px, -9px);
   }
   100% {
-    transform: rotate(-45deg);
-    transform-origin: 7% -62%;
+    transform: translate(0px, -9px) rotate(-45deg);
   }
 }
 .navbar #hamburger .bar3-animate {
-  animation-name: bar3-animation;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: bar3-animation;
 }
 .navbar #hamburger .bar3-animate--reverse {
-  animation-name: bar3-animation--reverse;
   animation-duration: .5s;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: bar3-animation--reverse;
   animation-direction: reverse;
 }
 .navbar nav {

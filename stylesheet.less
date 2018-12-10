@@ -106,94 +106,79 @@ section, header{
         cursor: pointer;
         float: right;
         padding: 5px 10px;
-        // background-image: url('x-icon.png');
-        // background-position: center center;
-        // background-size: 45%;
-        // background-repeat: no-repeat;
         div{
             width: 25px;
             height: 4px;
             background-color: @col--text;
-            // background-color: rgba(245, 182, 182, 0.849);
             margin: 5px 0;
             border-radius: 2px;
         }
+        .hamburger-animations{
+            animation-duration: .5s;
+            animation-fill-mode: forwards; 
+            animation-timing-function: ease-in-out;
+        }
+
+
+        //bar 1
         @keyframes bar1-animation{
-            50% {
-                transform: translate(0px,9px);
-            }
-            100%{
-                transform: rotate(45deg);
-                transform-origin: 6% 165%;
-            }
+            50% {transform: translate(0px,9px)}
+            100%{transform: translate(0px,9px) rotate(45deg)}
         }
         @keyframes bar1-animation--reverse{
-            50% {
-                transform: translate(0px,9px);
-            }
-            100%{
-                transform: rotate(45deg);
-                transform-origin: 6% 165%;
-            }
+            50% {transform: translate(0px,9px)}
+            100%{transform: translate(0px,9px) rotate(45deg)}
         }
         .bar1-animate{
+            .hamburger-animations;
             animation-name: bar1-animation;
-            animation-duration: .5s;
-            animation-fill-mode: forwards; 
         }
         .bar1-animate--reverse{
+            .hamburger-animations;
             animation-name: bar1-animation--reverse;
-            animation-duration: .5s;
-            animation-fill-mode: forwards; 
             animation-direction: reverse;
         }
+
+
+        //bar 2
         @keyframes bar2-animation{
             0% {background-color: @col--text}
             100% {background-color: transparent}
         }
         @keyframes bar2-animation--reverse{
             0% {background-color: transparent}
+            90% {background-color: transparent}
             100% {background-color: @col--text}
         }
         .bar2-animate{
+            .hamburger-animations;
             animation-name: bar2-animation;
             animation-delay: 0.2s;
             animation-duration: 0.1s;
-            animation-fill-mode: forwards;
         }
         .bar2-animate--reverse{
+            .hamburger-animations;
             animation-name: bar2-animation--reverse;
-            animation-delay: 5s;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
+            animation-duration: .25s;
         }
+        
+
+        //bar 3
         @keyframes bar3-animation{
-            50% {
-                transform: translate(0px, -9px);
-            }
-            100%{
-                transform: rotate(-45deg);
-                transform-origin: 7% -62%;
-            }
+            50% {transform: translate(0px, -9px)}
+            100%{transform: translate(0px, -9px) rotate(-45deg)}
         }
         @keyframes bar3-animation--reverse{
-            50% {
-                transform: translate(0px, -9px);
-            }
-            100%{
-                transform: rotate(-45deg);
-                transform-origin: 7% -62%;
-            }
+            50% {transform: translate(0px, -9px)}
+            100%{transform: translate(0px, -9px) rotate(-45deg)}
         }
         .bar3-animate{
+            .hamburger-animations;
             animation-name: bar3-animation;
-            animation-duration: .5s;
-            animation-fill-mode: forwards; 
         }
         .bar3-animate--reverse{
+            .hamburger-animations;
             animation-name: bar3-animation--reverse;
-            animation-duration: .5s;
-            animation-fill-mode: forwards; 
             animation-direction: reverse;
         }
     }
