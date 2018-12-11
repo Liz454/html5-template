@@ -9,6 +9,9 @@
 .hidden{
     display: none;
 }
+.no-scroll{
+    overflow: hidden;
+}
 .link{
     color: @col--text;
     text-decoration: none;
@@ -106,6 +109,8 @@ section, header{
         cursor: pointer;
         float: right;
         padding: 5px 10px;
+        z-index: 2;
+        position: relative;
         div{
             width: 25px;
             height: 4px;
@@ -190,6 +195,33 @@ section, header{
         }
         h3{
             display: none;
+        }
+    }
+}
+
+#menu{
+    z-index: 1;
+    background-color: rgba(255,255,255,0.8);
+    position: fixed;
+    padding: 100px 0;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    .menu_container{
+        width: 300px;
+        margin: auto;
+        ul{
+            li{
+                font-size: 60px;
+                list-style-type: none;
+                a{
+                    color: @col--text;
+                    text-decoration: none;
+                }
+            }
+            li:hover{
+                background-color: #fff;
+            }
         }
     }
 }

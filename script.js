@@ -5,9 +5,11 @@ function scrollFunc(elementId){
 
 $(function() {
     $('#hamburger').on('click', function(){
+        showMenu();
         var bar1 = $("#hb-bar1");
         var bar2 = $("#hb-bar2");
         var bar3 = $("#hb-bar3");
+
         if (bar1.hasClass('bar1-animate') || bar1.hasClass('bar1-animate--reverse')){
             bar1.toggleClass('bar1-animate--reverse').toggleClass('bar1-animate');
             bar2.toggleClass('bar2-animate--reverse').toggleClass('bar2-animate');
@@ -19,3 +21,13 @@ $(function() {
         }
     });
 });
+
+function showMenu() {
+    $("#menu").fadeToggle(500, "swing");
+    $("body").toggleClass("no-scroll");
+
+    var windowHeight = $("window").height();
+    console.log(windowHeight);
+    // var menuHeight = $('.menu_container')[0];
+    // console.log(menuHeight.innerHeight());
+}

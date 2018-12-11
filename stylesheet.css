@@ -1,6 +1,9 @@
 .hidden {
   display: none;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .link {
   color: #3177b1;
   text-decoration: none;
@@ -117,6 +120,8 @@ header .link {
   cursor: pointer;
   float: right;
   padding: 5px 10px;
+  z-index: 2;
+  position: relative;
 }
 .navbar #hamburger div {
   width: 25px;
@@ -231,6 +236,30 @@ header .link {
 }
 .navbar nav h3 {
   display: none;
+}
+#menu {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  padding: 100px 0;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+#menu .menu_container {
+  width: 300px;
+  margin: auto;
+}
+#menu .menu_container ul li {
+  font-size: 60px;
+  list-style-type: none;
+}
+#menu .menu_container ul li a {
+  color: #3177b1;
+  text-decoration: none;
+}
+#menu .menu_container ul li:hover {
+  background-color: #fff;
 }
 .header {
   min-height: 80vh;
