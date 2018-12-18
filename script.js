@@ -25,9 +25,13 @@ $(function() {
 function showMenu() {
     $("#menu").fadeToggle(500, "swing");
     $("body").toggleClass("no-scroll");
-
-    var windowHeight = $("window").height();
-    console.log(windowHeight);
-    // var menuHeight = $('.menu_container')[0];
-    // console.log(menuHeight.innerHeight());
 }
+
+function menuButtons(id){
+    $("#hamburger").click();
+    scrollFunc(id);
+}
+
+$('#arrow__footer').on('click', function(){
+    $(".navbar")[0].scrollIntoView(true);
+});

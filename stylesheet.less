@@ -1,8 +1,8 @@
 // Variables
-@col--bg: #c3edf8;
-@col--text: #3177b1;
-// @col--bg: #cefae2;
-// @col--text: #0d7248;
+// @col--bg: #c3f0f8;
+// @col--text: #3177b1;
+@col--bg: #c7f0da;
+@col--text: #0d7248;
 
 
 // General styles
@@ -10,7 +10,9 @@
     display: none;
 }
 .no-scroll{
-    overflow: hidden;
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
 }
 .link{
     color: @col--text;
@@ -81,7 +83,10 @@ section, header{
         .font-sizes-sm;
     }
 }
-
+.section-height{
+    height: 700px;
+    padding: 50px 0;
+}
 
 //Section styles
 .navbar{
@@ -201,27 +206,38 @@ section, header{
 
 #menu{
     z-index: 1;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.9);
     position: fixed;
     padding: 100px 0;
     top: 0px;
     width: 100vw;
     height: 100vh;
     .menu_container{
-        width: 300px;
+        width: 500px;
         margin: auto;
-        ul{
-            li{
-                font-size: 60px;
-                list-style-type: none;
-                a{
-                    color: @col--text;
-                    text-decoration: none;
-                }
+        margin-top: 15vh;
+        font-size: 55px;
+        @media (max-width: 767px){
+            width: 300px;
+            font-size: 30px;
+        }
+        div{
+            padding: 0 10px;
+            margin: 10px 0;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.6s;
+            @media (max-width: 767px){
+                margin: 15px 0;
             }
-            li:hover{
-                background-color: #fff;
+            a{
+                color: @col--text;
+                text-decoration: none;
             }
+        }
+        div:hover{
+            background-color: @col--bg;
+            border-radius: 10px;
         }
     }
 }
@@ -255,5 +271,16 @@ section, header{
             background-size: 50px;
             }
         }
+    }
+}
+
+footer{
+    #arrow__footer{
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        background-color: @col--bg;
+        width: 30px;
+        height: 30px;
     }
 }

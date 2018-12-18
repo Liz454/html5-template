@@ -2,10 +2,12 @@
   display: none;
 }
 .no-scroll {
-  overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 .link {
-  color: #3177b1;
+  color: #0d7248;
   text-decoration: none;
 }
 .btn {
@@ -13,7 +15,7 @@
   cursor: pointer;
 }
 .btn-primary {
-  background-color: #3177b1;
+  background-color: #0d7248;
   color: #fff;
   text-decoration: none;
   padding: 10px 35px;
@@ -92,8 +94,12 @@ header .link {
     font-size: 16px;
   }
 }
+.section-height {
+  height: 700px;
+  padding: 50px 0;
+}
 .navbar {
-  background-color: #c3edf8;
+  background-color: #c7f0da;
   padding: 10px 0;
 }
 .navbar .logo {
@@ -126,7 +132,7 @@ header .link {
 .navbar #hamburger div {
   width: 25px;
   height: 4px;
-  background-color: #3177b1;
+  background-color: #0d7248;
   margin: 5px 0;
   border-radius: 2px;
 }
@@ -166,7 +172,7 @@ header .link {
 }
 @keyframes bar2-animation {
   0% {
-    background-color: #3177b1;
+    background-color: #0d7248;
   }
   100% {
     background-color: transparent;
@@ -180,7 +186,7 @@ header .link {
     background-color: transparent;
   }
   100% {
-    background-color: #3177b1;
+    background-color: #0d7248;
   }
 }
 .navbar #hamburger .bar2-animate {
@@ -239,7 +245,7 @@ header .link {
 }
 #menu {
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
   padding: 100px 0;
   top: 0px;
@@ -247,24 +253,41 @@ header .link {
   height: 100vh;
 }
 #menu .menu_container {
-  width: 300px;
+  width: 500px;
   margin: auto;
+  margin-top: 15vh;
+  font-size: 55px;
 }
-#menu .menu_container ul li {
-  font-size: 60px;
-  list-style-type: none;
+@media (max-width: 767px) {
+  #menu .menu_container {
+    width: 300px;
+    font-size: 30px;
+  }
 }
-#menu .menu_container ul li a {
-  color: #3177b1;
+#menu .menu_container div {
+  padding: 0 10px;
+  margin: 10px 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.6s;
+}
+@media (max-width: 767px) {
+  #menu .menu_container div {
+    margin: 15px 0;
+  }
+}
+#menu .menu_container div a {
+  color: #0d7248;
   text-decoration: none;
 }
-#menu .menu_container ul li:hover {
-  background-color: #fff;
+#menu .menu_container div:hover {
+  background-color: #c7f0da;
+  border-radius: 10px;
 }
 .header {
   min-height: 80vh;
-  background-color: #c3edf8;
-  color: #3177b1;
+  background-color: #c7f0da;
+  color: #0d7248;
   padding: 0;
   padding-top: 50px;
   padding-bottom: 10px;
@@ -292,4 +315,12 @@ header .link {
 }
 .header .btn-arrow__container .btn-arrow__btn:hover {
   background-size: 50px;
+}
+footer #arrow__footer {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: #c7f0da;
+  width: 30px;
+  height: 30px;
 }
