@@ -1,8 +1,12 @@
-
+//Scroll function
 function scrollFunc(elementId){
     $("#" + elementId)[0].scrollIntoView(true);
 }
+$('#arrow__footer').on('click', function(){
+    $(".navbar")[0].scrollIntoView(true);
+});
 
+// Hamburger animation
 $(function() {
     $('#hamburger').on('click', function(){
         showMenu();
@@ -22,16 +26,14 @@ $(function() {
     });
 });
 
+// Display menu
 function showMenu() {
     $("#menu").fadeToggle(500, "swing");
     $("body").toggleClass("no-scroll");
 }
 
+// hide menu and go to selected section
 function menuButtons(id){
     $("#hamburger").click();
     scrollFunc(id);
 }
-
-$('#arrow__footer').on('click', function(){
-    $(".navbar")[0].scrollIntoView(true);
-});

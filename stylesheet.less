@@ -1,11 +1,11 @@
-// Variables
-// @col--bg: #c3f0f8;
-// @col--text: #3177b1;
-@col--bg: #c7f0da;
-@col--text: #0d7248;
+//////////////////////// Variables ////////////////////////
+@col--bg: #c3f0f8;
+@col--text: #3177b1;
+// @col--bg: #c7f0da;
+// @col--text: #0d7248;
 
 
-// General styles
+//////////////////////// General styles ////////////////////////
 .hidden{
     display: none;
 }
@@ -88,7 +88,7 @@ section, header{
     padding: 50px 0;
 }
 
-//Section styles
+//////////////////////// Section styles ////////////////////////
 .navbar{
     background-color: @col--bg;
     padding: 10px 0;
@@ -114,7 +114,7 @@ section, header{
         cursor: pointer;
         float: right;
         padding: 5px 10px;
-        z-index: 2;
+        z-index: 3;
         position: relative;
         div{
             width: 25px;
@@ -205,7 +205,7 @@ section, header{
 }
 
 #menu{
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(255,255,255,0.9);
     position: fixed;
     padding: 100px 0;
@@ -250,6 +250,7 @@ section, header{
     padding: 0;
     padding-top: 50px;
     padding-bottom: 10px;
+    z-index: 1;
     @media screen and (min-width: 768px){
         padding-top: 80px;
     }
@@ -279,8 +280,13 @@ footer{
         position: fixed;
         bottom: 15px;
         right: 15px;
-        background-color: @col--bg;
+        background: @col--bg url("chevron-down.svg") center/40px no-repeat; 
+        border-radius: 5px;
         width: 30px;
-        height: 30px;
+        height: 20px;
+        text-align: center;
+        padding: 10px;
+        transform: rotate(180deg);
+        cursor: pointer;
     }
 }

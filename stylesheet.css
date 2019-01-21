@@ -7,7 +7,7 @@
   width: 100%;
 }
 .link {
-  color: #0d7248;
+  color: #3177b1;
   text-decoration: none;
 }
 .btn {
@@ -15,7 +15,7 @@
   cursor: pointer;
 }
 .btn-primary {
-  background-color: #0d7248;
+  background-color: #3177b1;
   color: #fff;
   text-decoration: none;
   padding: 10px 35px;
@@ -99,7 +99,7 @@ header .link {
   padding: 50px 0;
 }
 .navbar {
-  background-color: #c7f0da;
+  background-color: #c3f0f8;
   padding: 10px 0;
 }
 .navbar .logo {
@@ -126,13 +126,13 @@ header .link {
   cursor: pointer;
   float: right;
   padding: 5px 10px;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 .navbar #hamburger div {
   width: 25px;
   height: 4px;
-  background-color: #0d7248;
+  background-color: #3177b1;
   margin: 5px 0;
   border-radius: 2px;
 }
@@ -172,7 +172,7 @@ header .link {
 }
 @keyframes bar2-animation {
   0% {
-    background-color: #0d7248;
+    background-color: #3177b1;
   }
   100% {
     background-color: transparent;
@@ -186,7 +186,7 @@ header .link {
     background-color: transparent;
   }
   100% {
-    background-color: #0d7248;
+    background-color: #3177b1;
   }
 }
 .navbar #hamburger .bar2-animate {
@@ -244,7 +244,7 @@ header .link {
   display: none;
 }
 #menu {
-  z-index: 1;
+  z-index: 2;
   background-color: rgba(255, 255, 255, 0.9);
   position: fixed;
   padding: 100px 0;
@@ -277,20 +277,21 @@ header .link {
   }
 }
 #menu .menu_container div a {
-  color: #0d7248;
+  color: #3177b1;
   text-decoration: none;
 }
 #menu .menu_container div:hover {
-  background-color: #c7f0da;
+  background-color: #c3f0f8;
   border-radius: 10px;
 }
 .header {
   min-height: 80vh;
-  background-color: #c7f0da;
-  color: #0d7248;
+  background-color: #c3f0f8;
+  color: #3177b1;
   padding: 0;
   padding-top: 50px;
   padding-bottom: 10px;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -320,7 +321,12 @@ footer #arrow__footer {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  background-color: #c7f0da;
+  background: #c3f0f8 url("chevron-down.svg") center / 40px no-repeat;
+  border-radius: 5px;
   width: 30px;
-  height: 30px;
+  height: 20px;
+  text-align: center;
+  padding: 10px;
+  transform: rotate(180deg);
+  cursor: pointer;
 }
