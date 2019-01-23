@@ -245,18 +245,16 @@ header .link {
 }
 #menu {
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
-  padding: 100px 0;
   top: 0px;
   width: 100vw;
   height: 100vh;
 }
 #menu .menu_container {
-  width: 500px;
   margin: auto;
-  margin-top: 15vh;
-  font-size: 55px;
+  position: fixed;
+  font-size: 40px;
 }
 @media (max-width: 767px) {
   #menu .menu_container {
@@ -266,23 +264,30 @@ header .link {
 }
 #menu .menu_container div {
   padding: 0 10px;
-  margin: 10px 0;
+  margin: 30px 0;
   text-decoration: none;
+  min-width: 350px;
   cursor: pointer;
-  transition: 0.6s;
 }
 @media (max-width: 767px) {
   #menu .menu_container div {
-    margin: 15px 0;
+    margin: 5vh 0;
   }
 }
 #menu .menu_container div a {
+  transition: font-weight 0.4s ease-in-out;
   color: #3177b1;
   text-decoration: none;
+  vertical-align: top;
 }
-#menu .menu_container div:hover {
-  background-color: #c3f0f8;
-  border-radius: 10px;
+#menu .menu_container div .menu_dash {
+  position: relative;
+  height: 2px;
+  margin: 1px 0;
+  background-color: #fff;
+}
+#menu .menu_container div a:hover {
+  font-weight: 400;
 }
 .header {
   min-height: 80vh;

@@ -1,3 +1,21 @@
+// back to top button and maybe any other on scroll functions
+var scrollPos;
+$(window).on('scroll', function(){
+    scrollPos = $(window).scrollTop();
+
+    //back to top button
+    if (scrollPos > $('#howItWorks').offset().top){
+        $('#arrow__footer').fadeIn(800);
+    } else{
+        $('#arrow__footer').fadeOut(600);
+    }
+});
+
+// call functions on resize
+$(window).on('resize', function(){
+    menuPosition();
+});
+
 //Scroll function
 function scrollFunc(elementId){
     $("#" + elementId)[0].scrollIntoView(true);
@@ -5,6 +23,7 @@ function scrollFunc(elementId){
 $('#arrow__footer').on('click', function(){
     $(".navbar")[0].scrollIntoView(true);
 });
+
 
 // Hamburger animation
 $(function() {
@@ -30,6 +49,17 @@ $(function() {
 function showMenu() {
     $("#menu").fadeToggle(500, "swing");
     $("body").toggleClass("no-scroll");
+    menuPosition();
+}
+
+//Menu positioning
+function menuPosition(){
+    var marginV = ($(window).height() - $('.menu_container').height()) / 2;
+    var marginH = ($(window).width() - $('.menu_container').width()) / 2;
+    if (marginH > 450){
+        marginH = 450;
+    }
+    $('.menu_container').css({'margin': marginV +'px ' + marginH + 'px'});
 }
 
 // hide menu and go to selected section
