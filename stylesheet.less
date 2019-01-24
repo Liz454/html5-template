@@ -3,6 +3,7 @@
 @col--text: #3177b1;
 // @col--bg: #c7f0da;
 // @col--text: #0d7248;
+@title: 'Playfair Display', serif;
 
 
 //////////////////////// General styles ////////////////////////
@@ -206,63 +207,59 @@ section, header{
 
 #menu{
     z-index: 2;
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.9);
     position: fixed;
-    // padding: 100px 0;
     top: 0px;
     width: 100vw;
     height: 100vh;
     .menu_container{
-        // width: 800px;
         margin: auto;
         position: fixed;
-        // margin-top: 15vh;
         font-size: 40px;
         @media (max-width: 767px){
             width: 300px;
             font-size: 30px;
         }
-        div{
+        .menu-option_container{
+            display: none;
+            font-family: @title;
             padding: 0 10px;
-            // text-align: center;
             margin: 30px 0;
             text-decoration: none;
             min-width: 350px;
             cursor: pointer;
             @media (max-width: 767px){
                 margin: 5vh 0;
+                min-width: 0;
             }
             a{
                 transition: font-weight .4s ease-in-out;
                 color: @col--text;
                 text-decoration: none;
-                // display: inline-block;
                 vertical-align: top;
             }
             .menu_dash{
                 position: relative;
                 height: 2px;
                 margin: 1px 0;
-                background-color: #fff;
-                // &__inner{
-                //     width: 5px;
-                //     margin:0;
-                //     background-color: @col--text;
-                // }
+                &__inner{
+                    width: 0%;
+                    height: 2px;
+                    margin:0;
+                    background-color: @col--text;
+                    transition: width 0.3s ease-in-out;
+                }
+                &__inner--hover{
+                    width: 100%;
+                }
             }
-            a:hover{
-            // background-color: @col--bg;
-                font-weight: 400;
-            // border-radius: 10px;
-            }
-        }
-        
+        }  
     }
 }
 
 
 .header{
-    min-height: 80vh; //need to somehow minus navbar height
+    min-height: 60vh; //need to somehow minus navbar height
     background-color: @col--bg;
     color: @col--text;
     padding: 0;

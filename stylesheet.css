@@ -245,7 +245,7 @@ header .link {
 }
 #menu {
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0px;
   width: 100vw;
@@ -262,7 +262,9 @@ header .link {
     font-size: 30px;
   }
 }
-#menu .menu_container div {
+#menu .menu_container .menu-option_container {
+  display: none;
+  font-family: 'Playfair Display', serif;
   padding: 0 10px;
   margin: 30px 0;
   text-decoration: none;
@@ -270,27 +272,34 @@ header .link {
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  #menu .menu_container div {
+  #menu .menu_container .menu-option_container {
     margin: 5vh 0;
+    min-width: 0;
   }
 }
-#menu .menu_container div a {
+#menu .menu_container .menu-option_container a {
   transition: font-weight 0.4s ease-in-out;
   color: #3177b1;
   text-decoration: none;
   vertical-align: top;
 }
-#menu .menu_container div .menu_dash {
+#menu .menu_container .menu-option_container .menu_dash {
   position: relative;
   height: 2px;
   margin: 1px 0;
-  background-color: #fff;
 }
-#menu .menu_container div a:hover {
-  font-weight: 400;
+#menu .menu_container .menu-option_container .menu_dash__inner {
+  width: 0%;
+  height: 2px;
+  margin: 0;
+  background-color: #3177b1;
+  transition: width 0.3s ease-in-out;
+}
+#menu .menu_container .menu-option_container .menu_dash__inner--hover {
+  width: 100%;
 }
 .header {
-  min-height: 80vh;
+  min-height: 60vh;
   background-color: #c3f0f8;
   color: #3177b1;
   padding: 0;

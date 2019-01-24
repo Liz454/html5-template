@@ -7,7 +7,7 @@ $(window).on('scroll', function(){
     if (scrollPos > $('#howItWorks').offset().top){
         $('#arrow__footer').fadeIn(800);
     } else{
-        $('#arrow__footer').fadeOut(600);
+        $('#arrow__footer').fadeOut();
     }
 });
 
@@ -47,7 +47,8 @@ $(function() {
 
 // Display menu
 function showMenu() {
-    $("#menu").fadeToggle(500, "swing");
+    $("#menu").slideToggle(500, "swing");
+    $('.menu-option_container').fadeToggle(300);
     $("body").toggleClass("no-scroll");
     menuPosition();
 }
@@ -67,3 +68,10 @@ function menuButtons(id){
     $("#hamburger").click();
     scrollFunc(id);
 }
+
+// menu option underline
+$('.menu-option_container').hover(function(){
+    $(this).find('.menu_dash__inner').addClass('menu_dash__inner--hover');
+}, function(){
+    $(this).find('.menu_dash__inner').removeClass('menu_dash__inner--hover');
+});
