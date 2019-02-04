@@ -3,6 +3,8 @@
 @col--text: #3177b1;
 // @col--bg: #c7f0da;
 // @col--text: #0d7248;
+// @col--bg: #d8f9ff;
+// @col--text: #491352;
 @title: 'Playfair Display', serif;
 
 
@@ -93,6 +95,9 @@ section, header{
 .navbar{
     background-color: @col--bg;
     padding: 10px 0;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
     .logo{ 
         margin: 0;
         width: 65px;
@@ -216,21 +221,21 @@ section, header{
         margin: auto;
         position: fixed;
         font-size: 40px;
-        @media (max-width: 767px){
-            width: 300px;
-            font-size: 30px;
-        }
         .menu-option_container{
             display: none;
             font-family: @title;
             padding: 0 10px;
-            margin: 30px 0;
+            margin: 5vh 0;
             text-decoration: none;
             min-width: 350px;
             cursor: pointer;
+            @media (max-width: 1400px){
+                font-size: 35px;
+                min-width: 300px;
+            }
             @media (max-width: 767px){
-                margin: 5vh 0;
-                min-width: 0;
+                font-size: 30px;
+                min-width: 275px;
             }
             a{
                 transition: font-weight .4s ease-in-out;
@@ -259,21 +264,48 @@ section, header{
 
 
 .header{
-    min-height: 60vh; //need to somehow minus navbar height
+    // max-height: 100vh; //need to somehow minus navbar height
     background-color: @col--bg;
     color: @col--text;
     padding: 0;
-    padding-top: 50px;
+    padding-top: 35px;
     padding-bottom: 10px;
     z-index: 1;
     @media screen and (min-width: 768px){
         padding-top: 80px;
     }
+    .header-content{
+        overflow: auto;
+        @media (min-width: 768px){
+            padding-bottom: 50px;
+        }
+        .header-content__text{
+            @media (min-width: 768px){
+                float: left;
+                width: 48%;
+                margin-top: 45px;
+            }
+        }
+        .header-image{
+            width: 70vw;
+            height: 70vw;
+            max-height: 350px;
+            max-width: 350px;
+            margin: 50px auto;
+            background-image: url('social-media.svg');
+            background-size: cover;
+            @media (min-width: 768px){
+                float: right;
+                width: 350px;
+                height: 350px;
+                margin: 0;
+            }
+        }
+    }
+    
     .btn-arrow__container{
-        width: inherit;
-        max-width: 1000px;
-        position: absolute;
-        bottom: 60px;
+        width: 100%;
+        bottom: 30vh;
         .btn-arrow__btn{
            background: transparent url("chevron-down.svg") center/40px no-repeat; 
            border: none;
@@ -281,8 +313,8 @@ section, header{
            padding: 10px 20px;
            text-indent: -9999px;
            display: block;
-           margin: auto;
            transition: 0.1s;
+           margin: auto;
            &:hover{
             background-size: 50px;
             }
@@ -290,12 +322,53 @@ section, header{
     }
 }
 
+
+#howItWorks{
+    text-align: center;
+    .howItWorks__image{
+        background-image: url('smartphone.svg');
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        margin: 80px auto;
+    }
+    .howItWorks__item-container{
+        .howItWorks__item{
+            display: inline-block;
+            width: 27%;
+            padding: 10px;
+            vertical-align: top;
+            .howItWorks__item__icon {
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                margin: auto;
+                
+            }
+            .item1{
+                background-image: url('piggy-bank.svg')
+            }
+            .item2{
+                background-image: url('money.svg')
+            }
+            .item3{
+                background-image: url('profits.svg')
+            }
+            @media (max-width: 767px){
+                width: 100%;
+                display: inline;
+            }
+        }
+    }
+}
+
+
 footer{
     #arrow__footer{
         position: fixed;
         bottom: 15px;
         right: 15px;
-        background: @col--bg url("chevron-down.svg") center/40px no-repeat; 
+        background: @col--text url("chevron-down.svg") center/40px no-repeat; 
         border-radius: 5px;
         width: 30px;
         height: 20px;

@@ -256,25 +256,25 @@ header .link {
   position: fixed;
   font-size: 40px;
 }
-@media (max-width: 767px) {
-  #menu .menu_container {
-    width: 300px;
-    font-size: 30px;
-  }
-}
 #menu .menu_container .menu-option_container {
   display: none;
   font-family: 'Playfair Display', serif;
   padding: 0 10px;
-  margin: 30px 0;
+  margin: 5vh 0;
   text-decoration: none;
   min-width: 350px;
   cursor: pointer;
 }
+@media (max-width: 1400px) {
+  #menu .menu_container .menu-option_container {
+    font-size: 35px;
+    min-width: 300px;
+  }
+}
 @media (max-width: 767px) {
   #menu .menu_container .menu-option_container {
-    margin: 5vh 0;
-    min-width: 0;
+    font-size: 30px;
+    min-width: 275px;
   }
 }
 #menu .menu_container .menu-option_container a {
@@ -299,11 +299,10 @@ header .link {
   width: 100%;
 }
 .header {
-  min-height: 60vh;
   background-color: #c3f0f8;
   color: #3177b1;
   padding: 0;
-  padding-top: 50px;
+  padding-top: 35px;
   padding-bottom: 10px;
   z-index: 1;
 }
@@ -312,11 +311,41 @@ header .link {
     padding-top: 80px;
   }
 }
+.header .header-content {
+  overflow: auto;
+}
+@media (min-width: 768px) {
+  .header .header-content {
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .header .header-content .header-content__text {
+    float: left;
+    width: 48%;
+    margin-top: 45px;
+  }
+}
+.header .header-content .header-image {
+  width: 70vw;
+  height: 70vw;
+  max-height: 350px;
+  max-width: 350px;
+  margin: 50px auto;
+  background-image: url('social-media.svg');
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .header .header-content .header-image {
+    float: right;
+    width: 350px;
+    height: 350px;
+    margin: 0;
+  }
+}
 .header .btn-arrow__container {
-  width: inherit;
-  max-width: 1000px;
-  position: absolute;
-  bottom: 60px;
+  width: 100%;
+  bottom: 30vh;
 }
 .header .btn-arrow__container .btn-arrow__btn {
   background: transparent url("chevron-down.svg") center / 40px no-repeat;
@@ -325,17 +354,54 @@ header .link {
   padding: 10px 20px;
   text-indent: -9999px;
   display: block;
-  margin: auto;
   transition: 0.1s;
+  margin: auto;
 }
 .header .btn-arrow__container .btn-arrow__btn:hover {
   background-size: 50px;
+}
+#howItWorks {
+  text-align: center;
+}
+#howItWorks .howItWorks__image {
+  background-image: url('smartphone.svg');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin: 80px auto;
+}
+#howItWorks .howItWorks__item-container .howItWorks__item {
+  display: inline-block;
+  width: 27%;
+  padding: 10px;
+  vertical-align: top;
+}
+#howItWorks .howItWorks__item-container .howItWorks__item .howItWorks__item__icon {
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+#howItWorks .howItWorks__item-container .howItWorks__item .item1 {
+  background-image: url('piggy-bank.svg');
+}
+#howItWorks .howItWorks__item-container .howItWorks__item .item2 {
+  background-image: url('money.svg');
+}
+#howItWorks .howItWorks__item-container .howItWorks__item .item3 {
+  background-image: url('profits.svg');
+}
+@media (max-width: 767px) {
+  #howItWorks .howItWorks__item-container .howItWorks__item {
+    width: 100%;
+    display: inline;
+  }
 }
 footer #arrow__footer {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  background: #c3f0f8 url("chevron-down.svg") center / 40px no-repeat;
+  background: #3177b1 url("chevron-down.svg") center / 40px no-repeat;
   border-radius: 5px;
   width: 30px;
   height: 20px;

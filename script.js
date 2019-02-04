@@ -48,7 +48,7 @@ $(function() {
 // Display menu
 function showMenu() {
     $("#menu").slideToggle(500, "swing");
-    $('.menu-option_container').fadeToggle(300);
+    $('.menu-option_container').fadeToggle(500);
     $("body").toggleClass("no-scroll");
     menuPosition();
 }
@@ -57,8 +57,8 @@ function showMenu() {
 function menuPosition(){
     var marginV = ($(window).height() - $('.menu_container').height()) / 2;
     var marginH = ($(window).width() - $('.menu_container').width()) / 2;
-    if (marginH > 450){
-        marginH = 450;
+    if (marginH > 350){
+        marginH = $(window).width() * 0.2;
     }
     $('.menu_container').css({'margin': marginV +'px ' + marginH + 'px'});
 }
